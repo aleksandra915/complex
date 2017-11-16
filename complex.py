@@ -1,5 +1,7 @@
 #!/usr/local/bin/python
 
+import unittest
+
 class Complex(object):
 	def __init__(self, real, imag=0.0):
 		self.real = real
@@ -38,3 +40,25 @@ b = Complex(-5,-3)
 c = Complex(1,-5)
 d = Complex(-3,-4)
 e = 2
+
+class TestComplexMethods(unittest.TestCase):
+	
+	def testInit(self):
+		self.assertEqual(c.real,1)
+		self.assertEqual(c.imag,-5)
+	def testAdd(self):
+		f = a + b
+		self.assertEqual(f.real,-4)
+		self.assertEqual(f.imag,-1)
+	def testSub(self):
+		f = a - b
+		self.assertEqual(f.real,6)
+		self.assertEqual(f.imag,5)
+	def testMul(self):
+		f = a * b 
+		self.assertEqual(f.real,1)
+		self.assertEqual(f.imag,-13)
+	
+
+if __name__ == '__main__':
+    unittest.main()
