@@ -38,3 +38,5 @@ b = Complex(-5,-3)
 c = Complex(1,-5)
 d = Complex(-3,-4)
 e = 2
+
+# KRZYSIUUUUU JA CIEBIE NIE SZANUJE
