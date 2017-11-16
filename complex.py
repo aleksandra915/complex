@@ -41,6 +41,7 @@ c = Complex(1,-5)
 d = Complex(-3,-4)
 e = 2
 
+
 class TestComplexMethods(unittest.TestCase):
 	
 	def testInit(self):
