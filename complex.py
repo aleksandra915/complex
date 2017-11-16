@@ -21,7 +21,7 @@ class Complex(object):
 	def __truediv__(self, other):
         	r = float(other.real**2 + other.imag**2)
         	return Complex((self.real*other.real+self.imag*other.imag)/r, (self.imag*other.real-self.real*other.imag)/r)
-
+		
 	def __abs__(self):
         	return sqrt(self.real**2 + self.imag**2)
 
@@ -59,7 +59,8 @@ class TestComplexMethods(unittest.TestCase):
 		f = a * b 
 		self.assertEqual(f.real,1)
 		self.assertEqual(f.imag,-13)
-	
+	def testStr(self):
+		self.assertEqual(str(c),'(1, -5)')
 
 if __name__ == '__main__':
     unittest.main()
